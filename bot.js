@@ -341,5 +341,7 @@ client.on('message', message => {
       message.channel.send(helpEmbed);
     }
 });
-
+client.on('guildMemberAdd', member=> {
+    member.setNickname(`Gv|| ${member.user.username}`)
+});
 client.login(process.env.BOT_TOKEN);
